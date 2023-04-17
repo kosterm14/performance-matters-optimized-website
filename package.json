@@ -1,0 +1,26 @@
+{
+  "name": "performance-matters-optimized-website",
+  "version": "1.0.0",
+  "description": "optimized website visual thinking",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Trisjan/performance-matters-optimized-website.git"
+  },
+  "author": "Marco, Trisjan, Eliza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Trisjan/performance-matters-optimized-website/issues"
+  },
+  "homepage": "https://github.com/Trisjan/performance-matters-optimized-website#readme",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "node": "^19.8.1"
+  }
+}

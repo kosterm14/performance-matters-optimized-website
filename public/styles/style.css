@@ -1,0 +1,434 @@
+:root {
+  font-size: 20px;
+
+  /* Visual Thinking: Primary Colors:
+    Zie kleuren styleguide of eventueel Figma designs voor gebruik! 
+    */
+  --vtDarkBlue: #090940;
+  --vtLightBlue: #67c5d1;
+  --vtYellow: #feb51e;
+  --vtRed: #f96c4f;
+  --vtWhite: #ffffff;
+
+  /* Visual Thinking: Primary Colors Lichtere versies, ongeveer 80%, 50%, 30% en 10% opacity van de originele kleuren ^
+    Zie kleuren styleguide of eventueel Figma designs voor gebruik! 
+    */
+  --vtDarkBlue-80: #3a3a66;
+  --vtDarkBlue-50: #6b6b8c;
+  --vtDarkBlue-30: #9d9db3;
+  --vtDarkBlue-10: #ceced9;
+
+  --vtLightBlue-80: #85d1da;
+  --vtLightBlue-50: #a4dce3;
+  --vtLightBlue-30: #c2e8ed;
+  --vtLightBlue-10: #e1f3f6;
+
+  --vtYellow-80: #fec44b;
+  --vtYellow-50: #fed378;
+  --vtYellow-30: #ffe1a5;
+  --vtYellow-10: #fff0d2;
+
+  --vtRed-80: #fa8972;
+  --vtRed-50: #fba795;
+  --vtRed-30: #fdc4b9;
+  --vtRed-10: #fee2dc;
+
+  /* Visual Thinking: Grijstinten:
+    Zie kleuren styleguide of eventueel Figma designs voor gebruik!
+     Word vaak gebruikt voor backgrounds en borders. 
+    */
+
+  --vtGrey-80: #c0beb9;
+  --vtGrey-50: #e0dedc;
+  --vtGrey-10: #f9f8f8;
+
+  /* Visual Thinking: Secondary colors,
+    Zie kleuren styleguide of eventueel Figma designs voor gebruik! 
+    Word gebruikt als steunkleuren bv: kleurcoderen van categorieën
+    */
+
+  --vtSec-Red: #af1301;
+  --vtSec-Red-30: #fbc5b4;
+  --vtSec-Green: #169861;
+  --vtSec-Green-30: #63c09f;
+  --vtSec-LightBlue: #4fbbc2;
+  --vtSec-DarkBlue: #31439c;
+  /* <--- deze kleur is de blauwe balk van de tekenmethodes detailpagina */
+  --vtSec-Brown: #8b3a00;
+  --vtSec-Orange: #fe6f07;
+
+  /* Visual Thinking: Fonts,
+    */
+
+  --vtPrimaryFont: "rigid-square", sans-serif;
+  --vtSecondaryFont: "yrsa", serif;
+}
+
+/* Breakpoint 1: ongeveer vanaf 496px 
+    kleine tablets/andere soort kleine schermen (1 kolom op tekenmethodes pagina)
+*/
+
+@media (min-width: 31em) {}
+
+/* Breakpoint 2: ongeveer vanaf 720px 
+    grotere tablets (2 kolom op tekenmethodes pagina)
+*/
+
+@media (min-width: 45em) {}
+
+/* Breakpoint 3: ongeveer vanaf 1088px 
+    laptops / iPad 12.9 horizontaal / (3 kolom op tekenmethodes pagina)
+*/
+
+@media (min-width: 68em) {}
+
+a {
+  text-decoration: none;
+}
+
+a {
+  cursor: pointer;
+}
+
+nav {
+  padding-left: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+img.header-logo {
+  display: inline-block;
+  width: 100%;
+}
+
+.h1 {
+  grid-column-start: 3;
+  grid-column-end: 7;
+  grid-row-start: 1;
+  height: 168px;
+}
+
+h1 {
+  font-size: 3.157rem;
+  font-family: var(--vtPrimaryFont);
+  color: var(--vtDarkBlue);
+  margin-top: 9%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto;
+  margin-top: 3%;
+  justify-content: center;
+}
+
+.gray1,
+.gray2,
+.gray3,
+.gray4,
+.gray5,
+.gray6 {
+  background: var(--vtGrey-80);
+}
+
+.red {
+  background: var(--vtRed);
+}
+
+.yellow {
+  background: var(--vtYellow);
+}
+
+.light-blue {
+  background: var(--vtLightBlue);
+}
+
+.blue {
+  background: var(--vtSec-DarkBlue);
+}
+
+.green {
+  background: var(--vtSec-Green);
+}
+
+.gray1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+}
+
+.gray2 {
+  grid-column-start: 7;
+  grid-column-end: 9;
+  grid-row-start: 1;
+}
+
+.gray3 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+}
+
+.gray4 {
+  grid-column-start: 7;
+  grid-column-end: 9;
+  grid-row-start: 3;
+}
+
+.gray5 {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 4;
+}
+
+.gray6 {
+  grid-column-start: 6;
+  grid-column-end: 8;
+  grid-row-start: 4;
+}
+
+.gray1,
+.gray2 {
+  margin-bottom: -20%;
+}
+
+.red,
+.h3-red {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+}
+
+.red,
+.yellow {
+  margin-top: 10%;
+}
+
+h3 {
+  font-size: 1rem;
+  font-family: var(--vtPrimaryFont);
+  line-height: 1.5rem;
+  color: var(--vtWhite)
+}
+
+.h2 {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 2;
+}
+
+h2 {
+  font-size: 0.9rem;
+  font-family: var(--vtPrimaryFont);
+  line-height: 1.5rem;
+  color: var(--vtDarkBlue);
+}
+
+.yellow,
+.h3-yellow {
+  grid-column-start: 6;
+  grid-column-end: 8;
+  grid-row-start: 2;
+}
+
+.light-blue,
+.h3-light-blue {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 3;
+}
+
+.light-blue,
+.blue,
+.h3-light-blue,
+.h3-blue,
+.gray3,
+.gray4 {
+  margin-top: -15%;
+}
+
+.green,
+.gray5,
+.gray6 {
+  margin-top: -10%;
+}
+
+.p {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 2;
+  margin-bottom: 23%;
+  opacity: 50%;
+  display: grid;
+  align-items: flex-end;
+}
+
+p {
+  font-size: 1rem;
+  font-family: var(--vtPrimaryFont);
+  text-transform: uppercase;
+}
+
+.blue,
+.h3-blue {
+  grid-column-start: 5;
+  grid-column-end: 7;
+  grid-row-start: 3;
+}
+
+.button {
+  z-index: 1;
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 2;
+  margin-top: 85%;
+}
+
+.green {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 4;
+}
+
+button {
+  width: 72px;
+  height: 66px;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  transform: rotate(90deg);
+  border: none;
+  background: var(--vtYellow);
+}
+
+.img {
+  display: flex;
+  justify-content: center;
+  transform: rotate(180deg);
+}
+
+.h1,
+.h2,
+.p,
+.button {
+  text-align: center;
+}
+
+.h3-red,
+.h3-yellow,
+.h3-light-blue,
+.h3-blue {
+  z-index: 1;
+  display: grid;
+  align-items: center;
+  text-align: center;
+}
+
+.red,
+.yellow,
+.light-blue,
+.blue,
+.gray1,
+.gray2,
+.gray3,
+.gray4,
+.gray5,
+.green,
+.gray6 {
+  width: 300px;
+  height: 275px;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  transform: rotate(90deg);
+}
+
+h4 {
+  text-align: center;
+  font-size: 1rem;
+  font-family: var(--vtPrimaryFont);
+  line-height: 1.5rem;
+  color: var(--vtDarkBlue);
+}
+
+/* @media only screen and (max-width: 435px) {
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    margin-top: -3%;
+    justify-content: center;
+  }
+
+  .h1 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-family: var(--vtPrimaryFont);
+    color: var(--vtDarkBlue);
+    margin-top: 12%;
+  }
+
+  .h2 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 2;
+  }
+
+  .red,
+  .h3-red {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    margin: 40px;
+  }
+
+  .yellow,
+  .h3-yellow {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    margin: 40px;
+  }
+
+  .light-blue,
+  .h3-light-blue {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 5;
+    margin: 40px;
+  }
+
+  .blue,
+  .h3-blue {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 6;
+    margin: 40px;
+  }
+
+  .button {
+    z-index: 1;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    margin-top: 65%;
+  }
+
+  .p {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    margin-bottom: 15%;
+    display: grid;
+    align-items: flex-end;
+  }
+
+  .grid-container-2 {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    padding: 10%;
+  }
+} */

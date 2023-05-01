@@ -263,6 +263,13 @@
   margin-bottom: 0%;
 }
 
+.h3-gray5,
+.h3-gray6,
+.h3-green {
+  margin-top: 25%;
+  margin-right: 7%;
+}
+
 .h3-red,
 .h3-yellow,
 .h3-light-blue,
@@ -296,6 +303,12 @@
   height: 275px;
   clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
   transform: rotate(90deg);
+}
+
+.h3-gray5,
+.h3-gray6,
+.h3-green {
+  transform: rotate(270deg);
 }
 
 em {

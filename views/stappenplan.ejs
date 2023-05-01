@@ -1,0 +1,51 @@
+<%- include('./partials/headDetail') %>
+
+    <nav>
+        <ul>
+            <a href="/method/<%= method.slug %>/template">
+                <li>
+                    <h2>Template</h2>
+                </li>
+            </a>
+            <a href="/method/<%= method.slug %>/beschrijving">
+                <li>
+                    <h2>Beschrijving</h2>
+                </li>
+            </a>
+            </a>
+            <li>
+                <h2 class="bold">Stappenplan</h2>
+            </li>
+            </a>
+            <a href="/method/<%= method.slug %>/voorbeelden">
+                <li>
+                    <h2>Voorbeelden</h2>
+                </li>
+            </a>
+            <a href="/method/<%= method.slug %>/form?id=<%= method.id %>">
+                <li>
+                    <h2>Feedback</h2>
+                </li>
+            </a>
+        </ul>
+    </nav>
+    </section>
+
+    <section class="full-s">
+        <section>
+            <% method.steps.forEach(step=> { %>
+                <h2 class="tag">
+                    <%= step?.title %>
+                </h2>
+
+                <h3 class="description">
+                    <%- step.description?.html %>
+                </h3>
+
+                <img src="<%- step.visual %>" alt="">
+                <% }) %>
+        </section>
+
+    </section>
+    </main>
+    </body>

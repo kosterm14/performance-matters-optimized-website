@@ -2,11 +2,11 @@
 <html lang="nl">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Visual Thinking</title>
-  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="\styles\style.css">
+
   <link rel="stylesheet" href="https://use.typekit.net/brx3lyu.css" />
   <!-- rigid square font -->
   <link rel="stylesheet" href="https://use.typekit.net/kdb0mcl.css" />
@@ -15,7 +15,7 @@
   <script src="/scripts/script.js" defer></script>
 </head>
 
-<body>
+<body class="page">
   <header>
     <section>
       <a href="/">
@@ -41,3 +41,20 @@
       </nav>
     </section>
   </header>
+
+  <section>
+    <a href="/">
+      <p class="line">
+        <img class="arrows-line" src="/assets/arrows.svg" alt="">
+        Overzicht <strong>tekenmethodes</strong>
+      </p>
+    </a>
+  </section>
+
+  <main>
+    <section class="navmain">
+      <section>
+        <h1 class="h1-detail">
+          <%= method.title %>
+        </h1>
+      </section>

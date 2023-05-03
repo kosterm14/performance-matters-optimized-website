@@ -2,67 +2,32 @@
 
     <nav>
         <ul>
-            <a href="/method/<%= method.slug %>/template">
-                <li>
-                    <h2>Template</h2>
-                </li>
-            </a>
             <li>
                 <h2 class="bold">Beschrijving</h2>
             </li>
             </a>
             <a href="/method/<%= method.slug %>/stappenplan">
                 <li>
-                    <h2>Stappenplan</h2>
+                    <h2 class="h2-detail">Stappenplan</h2>
                 </li>
             </a>
             <a href="/method/<%= method.slug %>/voorbeelden">
                 <li>
-                    <h2>Voorbeelden</h2>
+                    <h2 class="h2-detail">Voorbeelden</h2>
                 </li>
             </a>
             <a href="/method/<%= method.slug %>/form?id=<%= method.id %>">
                 <li>
-                    <h2>Feedback</h2>
+                    <h2 class="h2-detail">Feedback</h2>
                 </li>
             </a>
         </ul>
     </nav>
     </section>
 
-    <section class="full-b">
-        <section class="tags-b">
-            <img class="icon" src="/assets/icon1.png" alt="">
-            <% method.categories.forEach(category=> { %>
-                <h2 class="tag">
-                    <%= category?.title %>
-                </h2>
-                <% }) %>
-        </section>
-
-        <section class="tags-b">
-            <img class="icon" src="/assets/icon2.png" alt="">
-            <h2 class="tag">
-                <%= method.material %>
-            </h2>
-        </section>
-
-        <section class="tags-b">
-            <img class="icon" src="/assets/icon3.png" alt="">
-            <h2 class="tag">
-                <%= method.duration %>
-            </h2>
-        </section>
-
-        <section class="tags-b">
-            <img class="icon" src="/assets/icon4.png" alt="">
-            <h2 class="tag">
-                Marco:)
-            </h2>
-        </section>
-    </section>
-
-    <section class="flex">
+    <section class="flex-b">
+        <img class="template-url" src="<%= method.template?.url %>" alt="">
+    
         <h3 class="text">
             <%- method.description.html %>
         </h3>

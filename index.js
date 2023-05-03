@@ -38,12 +38,8 @@ server.get("/", (request, response) => {
   })
 });
 
-server.get("/method/:slug/template", (request, response) => {
-  let detailPageUrl = url + "method/" + request.params.slug;
-
-  fetchJson(detailPageUrl).then((data) => {
-    response.render("template", data);
-  });
+server.get("/over", (request, response) => {
+  response.render("over");
 });
 
 server.get('/method/:slug/beschrijving', (request, response) => {
@@ -78,10 +74,10 @@ server.get('/method/:slug/form', (request, response) => {
   let detailPageUrl = baseurl + "method/" + request.params.slug;
 
   fetchJson(detailPageUrl).then((data) => {
-      fetchJson(commentUrl).then((data2) => {
-          const newdata = { detail: data, form: data2, slug: request.params.slug }
-          response.render('form', newdata)
-      })
+    fetchJson(commentUrl).then((data2) => {
+      const newdata = { detail: data, form: data2, slug: request.params.slug }
+      response.render('form', newdata)
+    })
   })
 })
 
@@ -121,3 +117,21 @@ export async function postJson(url, body) {
     .then((response) => response.json())
     .catch((error) => error)
 }
+
+// <section class="flex-s">
+//         <section class="full-s">
+//             <section>
+//                 <% method.steps.forEach(step=> { %>
+//                     <h2 class="tag">
+//                         <%= step?.title %>
+//                     </h2>
+
+//                     <h3 class="description">
+//                         <%- step.description?.html %>
+//                     </h3>
+
+//                     <img src="<%- step.visual %>" alt="">
+//                     <% }) %>
+//             </section>
+//         </section>
+//     </section>

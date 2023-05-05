@@ -56,7 +56,7 @@ server.get("/tekenmethodes", (request, response) => {
   let methodsUrl = url + "methods?first=1000";
 
   fetchJson(methodsUrl).then((data) => {
-      response.render("tekenmethodes", data);
+  response.render("tekenmethodes", data);
   });
 });
 

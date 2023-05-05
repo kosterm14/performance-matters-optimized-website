@@ -53,7 +53,11 @@ server.get("/over", (request, response) => {
 // route voor tekenmethodes
 
 server.get("/tekenmethodes", (request, response) => {
-  response.render("tekenmethodes");
+  let methodsUrl = url + "methods?first=1000";
+
+  fetchJson(methodsUrl).then((data) => {
+    response.render("tekenmethodes", data);
+  });
 });
 
 server.get("/method/:slug/beschrijving", (request, response) => {

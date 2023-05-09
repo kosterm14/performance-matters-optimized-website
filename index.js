@@ -17,6 +17,10 @@ app.get('/', function (req, res) {
   res.render('index')
 })
 
+app.get('/blogs', function (req, res) {
+  res.render('blog')
+})
+
 // Stel het poortnummer in waar express op gaat luisteren
 app.set('port', process.env.PORT || 8000)
 

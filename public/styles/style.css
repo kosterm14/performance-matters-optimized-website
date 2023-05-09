@@ -74,6 +74,47 @@
     mobile first besties (1 kolom op tekenmethodes pagina)
 */
 
+/* Index page */
+
+/* categorieën */
+
+.categorien {
+  display: flex;
+  flex-direction: column;
+}
+
+.lower h1 {
+  display: flex;
+  justify-content: center;
+  margin: 1em 2.05em;
+}
+
+.categorie h2 {
+  display: flex;
+  align-items: center;
+}
+
+.categorie .categorie-thumbnail {
+  border: 0.1rem solid var(--vtGrey-50);
+  max-width: 100%;
+}
+
+.categorie .categorie-logo {
+  margin-right: 0.5rem;
+}
+
+.categorie {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 2em 2.05em;
+}
+
+.view-method {
+  display: none;
+}
+
+
 /* 
     tekenmethodes pagina
 */
@@ -230,6 +271,24 @@ li a {
                         RESPONSIVE TABLET  
 */
 @media (min-width: 31em) {
+  /* Index page */
+
+  /* categorieën */
+  .categorie h2 {
+    font-size: 1.2em;
+  }
+
+  .view-method {
+    display: flex;
+    font-weight: bold;
+    flex-direction: column;
+    margin-top: 0.83em;
+  }
+
+  .categorie span {
+    font-size: 1em;
+  }
+
   .content {
     padding: 0 50px;
   }
@@ -292,9 +351,10 @@ footer {
   position: relative;
   left: 0;
   bottom: 0;
-  width: 100%;
+  width: 100vw;
   background-color: var(--vtGrey-10);
   padding: 50px;
+  max-width: 100%;
 }
 
 footer ul li {
@@ -345,6 +405,31 @@ footer ul li {
 }
 
 @media (min-width: 45em) {
+
+  /* Index page */
+
+  /* categorieën */
+  .categorien {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 5rem;
+    grid-row-gap: 2rem;
+    max-width: 100%;
+    margin: 0 2.05rem;
+  }
+
+  .categorie {
+    margin: 0;
+  }
+
+  .categorie h2 {
+    font-size: 1.2em;
+  }
+
+  .categorie span {
+    font-size: 0.85em;
+  }
+
   .tekenmethodes-main {
     display: grid;
     grid:
@@ -472,9 +557,30 @@ footer ul li {
     margin-top: 0px;
   }
 
+  /* Index page */
+
+  /* categorieën */
+  .categorien {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 8rem;
+    grid-row-gap: 3rem;
+    max-width: 100%;
+    margin: 0 4.1rem;
+  }
+
+  .categorie h2 {
+    font-size: 1.35em;
+  }
+
+  .categorie span {
+    font-size: 1em;
+  }
+
   /* 
     homepage by marco
 */
+
 
   .gray1,
   .gray2,

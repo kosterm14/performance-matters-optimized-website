@@ -51,7 +51,7 @@ server.get("/over", (request, response) => {
   response.render("over");
 });
 
-app.get('/blogs', function (req, res) {
+server.get('/blogs', function (req, res) {
   res.render('blog')
 })
 

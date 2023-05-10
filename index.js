@@ -1,4 +1,4 @@
-import express from "express";
+import express, { response } from "express";
 
 const url = "https://api.visualthinking.fdnd.nl/api/v1/";
 // const data = await fetch(url).then((response) => response.json())
@@ -49,6 +49,12 @@ server.get("/", (request, response) => {
 server.get("/over", (request, response) => {
   response.render("over");
 });
+
+// route voor minicursussen
+
+server.get("/basisvormen", (request, response) => {
+  response.render("minicursus_basisvormen");
+})
 
 // route voor tekenmethodes
 

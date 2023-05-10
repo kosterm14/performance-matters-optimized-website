@@ -1,32 +1,49 @@
 <%- include('./partials/head') %>
 
 <section class="loadingbar">
-    <button class="minicursus_close">X</button>
+    <a href="/">X</a>
+    <div class="carousel__nav">
+        <button class="carousel__indicator current-slide">
+        </button>
+        <button class="carousel__indicator">
+        </button>
+        <button class="carousel__indicator">
+        </button>
+        <button class="carousel__indicator">
+        </button>
+        <button class="carousel__indicator">
+        </button>
+        <button class="carousel__indicator">
+        </button>
+    </div>
 </section>
 <section class="carousel">
     <div class="carousel__track-container">
         <ul class="carousel__track">
             <li class="carousel__slide">
-                <img src="./assets/minicursus_basisvormen_firstslide.png" alt="first slide">
+                <img class="carousel__image" src="./assets/minicursus_basisvormen_firstslide.png" alt="first slide">
             </li>
             <li class="carousel__slide">
-                <img src="./assets/minicursus_basisvormen_secondslide.png" alt="second slide">
+                <img class="carousel__image" src="./assets/minicursus_basisvormen_secondslide.png" alt="second slide">
             </li>
             <li class="carousel__slide">
-                <img src="./assets/minicursus_basisvormen_thirdslide.png" alt="third slide">
+                <img class="carousel__image" src="./assets/minicursus_basisvormen_thirdslide.png" alt="third slide">
             </li>
             <li class="carousel__slide">
-                <img src="./assets/minicursus_basisvormen_fourthslide.png" alt=" fourth slide">
+                <img class="carousel__image" src="./assets/minicursus_basisvormen_fourthslide.png" alt=" fourth slide">
             </li>
             <li class="carousel__slide">
-                <img src="./assets/minicursus_basisvormen_fifthslide.png" alt="fifth slide">
+                <img class="carousel__image" src="./assets/minicursus_basisvormen_fifthslide.png" alt="fifth slide">
             </li>
             <li class="carousel__slide">
-                <img src="./assets/minicursus_basisvormen_sixthslide.png" alt="sixth slide">
-            </li>
+                <img class="carousel__image" src="./assets/minicursus_basisvormen_sixthslide.png" alt="sixth slide">
+            </li> 
         </ul>
     </div>
-    <button class="carousel__button"></button>
+
 </section>
 
-<%- include('./partials/foot') %>
+<section class="carousel__buttons">
+    <button class="carousel__button carousel__button--left"><<</button>
+    <button class="carousel__button carousel__button--right">>></button>
+</section>

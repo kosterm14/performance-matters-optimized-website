@@ -74,6 +74,10 @@
     mobile first besties (1 kolom op tekenmethodes pagina)
 */
 
+body {
+  min-height: 100vh;
+}
+
 /* 
     tekenmethodes pagina
 */
@@ -406,8 +410,63 @@ footer ul li {
 
 @media (min-width: 68em) {
   /* 
+    carousel minicursus 
+  */
+  .carousel__image {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .carousel__track-container {
+    background: var(--vtSec-Green);
+    height: 100%;
+    position: relative;
+  }
+
+  .carousel__track {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .carousel__slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .carousel__buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .carousel__button {
+    cursor: pointer;
+  }
+
+  .carousel__nav {
+    display: flex;
+    justify-content: center;
+    padding: 0.5em 0;
+  }
+
+  .carousel__indicator {
+    border: 0;
+    border-radius: 50%;
+    width: 0.75em;
+    height: 0.75em;
+    background-color: rgba(0, 0, 0, .3);
+    margin: 0 12px;
+  }
+
+  .carousel__indicator.current-slide {
+    background: rgba(0, 0, 0, 0.75);
+  }
+
+  /* 
     tekenmethodes pagina
-*/
+  */
 
   .tekenmethodes-main {
     display: grid;

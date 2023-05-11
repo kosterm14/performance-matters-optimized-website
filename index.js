@@ -14,7 +14,36 @@ server.set("view engine", "ejs");
 server.set("views", "./views");
 
 // Stel het poortnummer in waar express op gaat luisteren
-app.set('port', process.env.PORT || 8000)
+server.set('port', process.env.PORT || 8000)
+
+// Stel afhandeling van formulieren inzx
+server.use(express.json())
+server.use(express.urlencoded({ extended: true }))
+
+server.get("/", (request, response) => {
+  let methodsUrl = url + "methods?first=1000";
+  const urlM = "https://api.visualthinking.fdnd.nl/api/v1/method?id=clefeo2wdaw0w0aw8vf5he8cc"
+  const urlD = "https://api.visualthinking.fdnd.nl/api/v1/method?id=cle5s25j31kq90aw1jh50s0d8"
+  const urlP = "https://api.visualthinking.fdnd.nl/api/v1/method?id=cleft0wod02hc0bwap2eotvbm"
+
+  // fetchJson(methodsUrl).then((data) => {
+  //   console.log(data)
+  //   response.render("index", data);
+  // });
+
+  fetchJson(urlM).then((dataM) => {
+    fetchJson(urlD).then((dataD) => {
+      fetchJson(urlP).then((dataP) => {
+        const newdata = { m: dataM, d: dataD, p: dataP, slug: request.params.slug }
+        response.render('index', newdata)
+      })
+    })
+  })
+});
+
+server.get("/over", (request, response) => {
+  response.render("over");
+});
 
 server.get("/tekenmethodes", (request, response) => {
   let methodsUrl = url + "methods?first=1000";

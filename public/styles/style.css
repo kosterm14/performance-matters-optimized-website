@@ -68,6 +68,9 @@
 
   --vtPrimaryFont: "rigid-square", sans-serif;
   --vtSecondaryFont: "yrsa", serif;
+
+  overflow-x: hidden;
+  font-family: var(--vtSecondaryFont);
 }
 
 /* Breakpoint 0: onder 496px 
@@ -509,10 +512,19 @@ footer ul li {
 
   .categorie h2 {
     font-size: 1.35em;
+    margin: 0.5em 0;
   }
 
   .categorie span {
     font-size: 1em;
+  }
+
+  .lower h1 {
+    font-size: 32px;
+  }
+
+  .lower {
+    margin: 3em 0;
   }
 
 
